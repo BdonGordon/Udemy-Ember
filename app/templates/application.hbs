@@ -1,8 +1,23 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{!-- Feel free to remove this! --}}
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="navbar-header">
+    {{#link-to "index"}}
+      <h1 class="navbar-text">Udemy Ember</h1>
+    {{/link-to}}
+
+    <ul class="nav nav-pills menu-options">
+      {{#link-to "posts"}}
+      <li>Posts</li>
+      {{/link-to}}
+      {{#link-to "about"}}
+      <li>About Us</li>
+      {{/link-to}}
+      {{#link-to "services"}}
+      <li>Services</li>
+      {{/link-to}}
+    </ul>
+  </div>
+</nav>
 
 <div class="container">
-  <h1>Udemy Tutorial of Ember</h1>
-</div>
-
-{{outlet}}
+  {{outlet}}
+</div><!-- /.container -->

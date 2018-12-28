@@ -16,6 +16,8 @@ Router.map(function() {
   */
   this.route('posts', { path: '/posts' }, function () {
     this.route('new');
+    //This ID is a variable that will utilize the Post model's data (post_id) to access this via: ...posts/1
+    this.route('post', { path: ':post_id' });
   });
 });
 
