@@ -1,6 +1,11 @@
 {{!--From the /controllers/posts/post.js controller--}}
 <h2>{{title}}</h2>
-<p>{{body}}</p>
+{{#if isShowingBody}}
+  <p>{{body}}</p>
+{{/if}}
+
+{{!--Here, we are calling the helper file, format-date, and passing a single parameter into it--}}
+<p>Posted at: {{format-date created}}</p>
 <div class="blog-container">
   <strong>Authors: </strong>
   {{#each authors as |author|}}
@@ -13,5 +18,25 @@
       <li><strong>{{comment.name}}</strong> -- {{comment.comment}}</li>
     {{/each}}
   </ul>
+
+  <hr />
+  <h4>Add Comment</h4>
+  <div>
+    <form {{action 'submitAction' on="submit"}} >
+      <p>
+        Name: {{input value=name}}
+      </p>
+      <p>
+        Comment: {{textarea value=comment}}
+      </p>
+      <button type="submit">Post</button>
+    </form>
+  </div>
+
+  {{!--Since it's a button, by default, sayHello() will invoke onClick. We override that to say on="mouseEnter" and other sort of actions--}}
+  <div class="funbox-buttons">
+    <button {{action 'sayHello' on="mouseEnter"}}>Say Hello</button>
+    <button {{action 'toggleBody'}}>Toggle Blog Body</button>
+  </div>
 </div>
 {{outlet}}
