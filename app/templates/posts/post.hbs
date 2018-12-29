@@ -1,10 +1,17 @@
 {{!--From the /controllers/posts/post.js controller--}}
 <h2>{{title}}</h2>
 <p>{{body}}</p>
-<div>
+<div class="blog-container">
   <strong>Authors: </strong>
   {{#each authors as |author|}}
   {{author}},
   {{/each}}
+
+  <h4>User Comments: </h4>
+  <ul>
+    {{#each comments as |comment|}}
+      <li><strong>{{comment.name}}</strong> -- {{comment.comment}}</li>
+    {{/each}}
+  </ul>
 </div>
 {{outlet}}
