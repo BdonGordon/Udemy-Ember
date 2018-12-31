@@ -2,7 +2,8 @@
 
 <ul>
   {{#each model as |car|}}
-  <li><strong>{{car.make}} {{car.model}}</strong> {{car.year}}</li>
+  {{!--Looking at the #link-to, we are passing the url id like so:--}}
+  <li><strong>{{car.make}} {{car.model}}</strong> {{car.year}} - {{#link-to "cars.edit" car.id}}Edit{{/link-to}}</li>
   {{/each}}
 </ul>
 

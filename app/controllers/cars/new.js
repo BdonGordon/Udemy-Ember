@@ -6,9 +6,11 @@ export default Controller.extend({
       let make = this.get('carMake');
       let model = this.get('carModel');
       let year = this.get('carYear');
+      let rand = Math.floor((Math.random() * 10000) + 1);
 
       var self = this;
       var newCar = this.store.createRecord('car', {
+        id: rand,
         make: make,
         model: model,
         year: year

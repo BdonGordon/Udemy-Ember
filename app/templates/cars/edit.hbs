@@ -1,0 +1,10 @@
+<!--The model.id there in the form as the parameter-->
+<form {{action 'editCar' model.id on="submit"}}>
+  <!--Making the values here equal the current values before editing-->
+  <p>Make: {{input type='text' value=model.make}}</p>
+  <p>Model: {{input type='text' value=model.model}}</p>
+  <p>Year: {{input type='text' value=model.year}}</p>
+  <p>{{input type='submit' value='Submit'}}</p>
+</form>
+
+{{outlet}}
