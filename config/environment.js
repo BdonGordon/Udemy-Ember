@@ -4,6 +4,9 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'udem-tutorial',
     environment,
+    contentSecurityPolicy: {
+      'connect-src': "'self' https://api.github.com"
+    },
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
