@@ -22,6 +22,7 @@ Router.map(function() {
   });
   this.route('cars', function() {
     this.route('new');
+    //Passing the ID can be found in the /templates/cars.hbs
     this.route('edit', { path: '/edit/:car_id' });
   });
   this.route('users');

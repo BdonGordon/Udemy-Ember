@@ -2,8 +2,12 @@
 
 <ul>
   {{#each model as |car|}}
-  {{!--Looking at the #link-to, we are passing the url id like so:--}}
-  <li><strong>{{car.make}} {{car.model}}</strong> {{car.year}} - {{#link-to "cars.edit" car.id}}Edit{{/link-to}}</li>
+  <li>
+    {{!--Looking at the #link-to, we are passing the url id like so: "cars.edit" car.id --}}
+    <strong>{{car.make}} {{car.model}}</strong> {{car.year}} - {{#link-to "cars.edit" car.id}}Edit{{/link-to}}
+    {{!--Delete car is an action in controllers/car.js that requires the car ID parameter; passed like so:--}}
+    <button {{action 'deleteCar' car.id}}>Delete</button>
+  </li>
   {{/each}}
 </ul>
 
