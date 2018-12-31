@@ -1,0 +1,5 @@
+------------Simple Component-------------------
+1. The simple component section 6 lec 24 is covered in /templates/index.hbs. In this file,
+we render 2 components.
+2. The components that are rendered and utilized in this chapter are: /app/components/my-cool-component.js & other-cool-component.js along
+with their respective /templates/components/my-cool-component.hbs & other-cool-component.hbs

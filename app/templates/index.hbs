@@ -1,1 +1,12 @@
-<h1>Home Page Index</h1>
+<h1>Home Page Index - Component Learning</h1>
+
+{{!--All we need to do to render the component--}}
+{{!--We have also added properties that are passed into the component: title, body. See how to access the data in my-cool-component.hbs--}}
+{{my-cool-component title='Welcome to the component from Index' body='This is the body from the index'}}
+
+{{!--Another way to define a component is by treating it like a block--}}
+{{#other-cool-component title='Other Cool Component'}}
+  {{!--The yield tag in the other-cool-component.hbs will render everything that is inside of this block!--}}
+  <p>This is the other cool component. This will be rendered in the "yield" tag in other-cool-component.</p>
+  <p>More rendered stuff</p>
+{{/other-cool-component}}

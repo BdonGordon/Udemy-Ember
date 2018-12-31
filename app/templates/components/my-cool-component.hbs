@@ -1,0 +1,18 @@
+{{!--The title and body are being defined in the index.hbs and this is how we access it--}}
+<div>
+  <h4>{{title}} - {{name}}</h4>
+
+  <p>{{body}}</p>
+
+  {{!--What we are saying here: if greetingSet is TRUE, show this button. Otherwise, hide it--}}
+  {{#unless greetingSet}}
+    {{!--Here, we are passing a parameter from here (name) into the component. This is how it's done--}}
+    <button {{action 'greetUser' name}}>Greet User</button>
+  {{/unless}}
+
+  {{#if greetingSet}}
+    <h4>You have been greeted! Welcome.</h4>
+  {{/if}}
+</div>
+
+{{yield}}
