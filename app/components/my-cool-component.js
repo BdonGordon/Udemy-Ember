@@ -7,6 +7,7 @@ export default Component.extend({
     //name will be passed into here from the .hbs 
     greetUser: function (name) {
       alert("Greeting User " + name);
+      //this is how we set properties in this class
       this.setProperties({
         greetingSet: true
       });
