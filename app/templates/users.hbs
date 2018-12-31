@@ -1,0 +1,9 @@
+<h2>Users of App</h2>
+
+<ul>
+  {{#each model as |user|}}
+  <li><strong>{{user.login}}:</strong> {{user.id}}</li>
+  {{/each}}
+</ul>
+
+{{outlet}}

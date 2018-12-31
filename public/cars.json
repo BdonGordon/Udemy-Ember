@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "make": "Honda",
+    "model": "Civic",
+    "year": 2007
+  },
+  {
+    "id": 2,
+    "make": "Porsche",
+    "model": "9/11",
+    "year": 20016
+  },
+  {
+    "id": 3,
+    "make": "Lamborghini",
+    "model": "Ventador",
+    "year": 2019
+  }
+]

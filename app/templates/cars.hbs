@@ -1,0 +1,9 @@
+<h2>Cars Post</h2>
+
+<ul>
+  {{#each model as |car|}}
+  <li><strong>{{car.make}} {{car.model}}</strong> {{car.year}}</li>
+  {{/each}}
+</ul>
+
+{{outlet}}
