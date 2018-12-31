@@ -20,7 +20,9 @@ Router.map(function() {
     //this.route('post', {path: ':path_id'})
     this.route('post');
   });
-  this.route('cars');
+  this.route('cars', function() {
+    this.route('new');
+  });
   this.route('users');
 });
 

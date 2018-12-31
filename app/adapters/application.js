@@ -5,6 +5,6 @@ export default DS.RESTAdapter.extend({
 
   //Returning false if there ar eno records at all
   shouldReloadAll() {
-    return true;
+    return false;
   } 
 });
